@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Listar productos
+curl http://localhost:3000/api/v1/products
 
-Things you may want to cover:
+# Producto por ID
+curl http://localhost:3000/api/v1/products/1
 
-* Ruby version
+# Nuevo producto
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Nuevo producto", "description":"Descripción del nuevo producto", "price": 19.99}' http://localhost:3000/api/v1/products
 
-* System dependencies
+# Actualizar producto
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Producto actualizado"}' http://localhost:3000/api/v1/products/1
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Eliminar producto
+curl -X DELETE http://localhost:3000/api/v1/products/1
